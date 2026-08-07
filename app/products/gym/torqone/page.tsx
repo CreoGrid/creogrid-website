@@ -1,5 +1,6 @@
 import { ProductHeader } from '@/components/products/TorqOne/ProductHeader';
 import { Navigation } from '@/components/products/TorqOne/Navigation';
+import { BreadcrumbBar } from '@/components/products/TorqOne/BreadcrumbBar';
 import { Hero } from '@/components/products/TorqOne/Hero';
 import { TrustBar } from '@/components/products/TorqOne/TrustBar';
 import { IndustryProblems } from '@/components/products/TorqOne/IndustryProblems';
@@ -21,6 +22,7 @@ export default function Home() {
   return (
     <div className="relative min-h-screen bg-torqone-background">
       <ProductHeader />
+      {/* <BreadcrumbBar/> */}
       <Hero />
       {/* <TrustBar /> */}
       <IndustryProblems />

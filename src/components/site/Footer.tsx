@@ -24,17 +24,17 @@ export function Footer() {
           <FooterColumn
             title="Company"
             links={[
-              { href: "#about", label: "About" },
-              { href: "#process", label: "Process" },
-              { href: "#industries", label: "Industries" },
+              { href: "/#about", label: "About" },
+              { href: "/#process", label: "Process" },
+              { href: "/#industries", label: "Industries" },
             ]}
           />
           <FooterColumn
             title="Platform"
             links={[
-              { href: "#solutions", label: "Solutions" },
-              { href: "#technology", label: "Technology" },
-              { href: "#contact", label: "Contact" },
+              { href: "/#solutions", label: "Solutions" },
+              { href: "/#technology", label: "Technology" },
+              { href: "/#contact", label: "Contact" },
             ]}
           />
           <div>

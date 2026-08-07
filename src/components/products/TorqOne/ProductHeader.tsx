@@ -62,7 +62,7 @@ export function ProductHeader() {
             : 'bg-transparent border-b border-transparent'
         )}
       >
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"> {/* Made it relative just for breadcrumb which think about later or use BreadcrumbBar component*/}
           <div className="flex h-16 items-center justify-between gap-4">
             {/* Left: CreoGrid parent context */}
             <div className="flex items-center gap-2.5 shrink-0">
@@ -82,7 +82,7 @@ export function ProductHeader() {
                             Tailored Intelligent Systems.
                           </p>
                         </a>
-                {/* <span className="text-[10px] text-torqone-text-muted">
+                {/* <span className="absolute top-22 left-8 text-[10px] text-torqone-text-muted cursor-default">
                   Products / Gym / torqone
                 </span> */}
               </div>
@@ -154,11 +154,17 @@ export function ProductHeader() {
               transition={{ type: 'spring', stiffness: 300, damping: 32 }}
               className="fixed inset-y-0 right-0 z-50 w-80 glass border-l border-torqone-border flex flex-col"
             >
-              <div className="flex items-center justify-between px-6 h-16 border-b border-torqone-border/50">
-                <div className="flex items-center gap-2.5">
+              <div className="flex items-center justify-between px-6 !h-20 border-b border-torqone-border/50">
+                {/* <div className="flex items-center gap-2.5">
                   <TorqOneLogo className="h-7 w-7" />
                   <span className="font-bold text-white">TorqOne</span>
-                </div>
+                </div> */}
+                <a href="#top" aria-label="CreoGrid home" className="flex items-center relative">
+          <Logo variant='mono-white' className="h-7 w-auto" />
+          <p className="absolute top-[24px] left-[30px] text-[10px] text-foreground/75 whitespace-nowrap">
+            Tailored Intelligent Systems.
+          </p>
+        </a>
                 <button
                   onClick={() => setMobileOpen(false)}
                   aria-label="Close menu"
@@ -168,8 +174,7 @@ export function ProductHeader() {
                 </button>
               </div>
 
-              <div className="px-6 py-3 border-b border-torqone-border/50 flex items-center gap-2">
-                <CreoGridLogo className="h-5 w-5" />
+              <div className="px-6 py-2 border-b border-torqone-border/50 flex items-center gap-2">
                 <span className="text-[11px] text-torqone-text-muted">
                   CreoGrid / Products / Gym
                 </span>

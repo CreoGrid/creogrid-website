@@ -236,7 +236,7 @@ export function SiteNav() {
       {open && (
         <div className="border-t border-border bg-white lg:hidden">
           <nav className="container-page flex flex-col gap-1 py-4" aria-label="Mobile">
-            <div className="rounded-xl border border-border/70 bg-muted/50">
+            <div className="border border-border/70 bg-muted/50 rounded-[7px]">
               <button
                 type="button"
                 aria-expanded={mobileProductsOpen}
@@ -257,7 +257,46 @@ export function SiteNav() {
                     transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
                     className="overflow-hidden border-t border-border/70 px-2 py-2"
                   >
-                    <div className="rounded-lg border border-border/70 bg-white/70 p-2">
+                    <div className="rounded-[6px] border border-border/70 bg-white/70 p-2">
+                    {PRODUCT_CATEGORIES.map((category) => (
+                        <button
+                          key={category.id}
+                          type="button"
+                          onMouseEnter={() => setActiveCategory(category.id)}
+                          onFocus={() => setActiveCategory(category.id)}
+                          className={cn(
+                            "rounded-[7px] border px-2 py-2 transition-all duration-200 cursor-pointer",
+                            activeCategory === category.id
+                              ? "border-primary/20 bg-primary/8 text-primary shadow-sm"
+                              : "border-transparent text-foreground/80 hover:border-primary/10 hover:bg-primary/5 hover:text-primary",
+                          )}
+                        >
+                          <div className="flex items-center justify-between gap-2">
+                            <span className="text-sm font-semibold">{category.label}</span>
+                            <ChevronDown className="h-4 w-4 opacity-70" />
+                          </div>
+                        {selectedCategory && category.id === selectedCategory.id && (
+                        <div className="space-y-2">
+                          {selectedCategory.items.map((item) => (
+                            <Link
+                              key={item.href}
+                              href={item.href}
+                              onClick={closeMenus}
+                              className="mt-1 flex flex-col rounded-md border border-transparent px-2 py-2 text-sm text-foreground/80 transition-colors hover:border-primary/10 hover:bg-primary/5 cursor-pointer"
+                            >
+                              <div className="flex items-center gap-2">
+                                <span className="h-2 w-2 rounded-full bg-green-500" />
+                                <span className="font-medium text-foreground">{item.label}</span>
+                              </div>
+                              <p className="mt-1 text-xs text-muted-foreground/80">{item.description}</p>
+                            </Link>
+                          ))}
+                        </div>
+                      ) }
+                        </button>
+                      ))}
+                    </div>
+                    {/* <div className="rounded-lg border border-border/70 bg-white/70 p-2">
                       <div className="rounded-md px-2 py-2 text-sm font-semibold text-foreground">Gym</div>
                       <Link
                         href="/products/gym/torqone"
@@ -267,7 +306,7 @@ export function SiteNav() {
                         <span className="font-medium text-foreground">TorqOne</span>
                         <span className="mt-1 text-xs text-muted-foreground/80">AI-powered operating system for modern gyms</span>
                       </Link>
-                    </div>
+                    </div> */}
                   </motion.div>
                 )}
               </AnimatePresence>

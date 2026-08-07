@@ -15,7 +15,7 @@ export function ProductClosing() {
         style={{ background: 'radial-gradient(ellipse, #3A5DE2 0%, transparent 70%)' }}
       />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8">
         <ScrollReveal>
           <div className="flex flex-col gap-6 items-center text-center">
                     <Image
@@ -31,26 +31,7 @@ export function ProductClosing() {
               Intelligent AI-powered enterprise platform for gym management & business growth
             </p>
 
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-              <Button
-                variant="gradient"
-                size="lg"
-                iconPosition="right"
-                icon={<ArrowRight className="w-4 h-4" />}
-              >
-                Book a Demo
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                iconPosition="left"
-                icon={<Phone className="w-4 h-4" />}
-              >
-                Talk to Sales
-              </Button>
-            </div>
-
-            <p className="text-[11px] text-torqone-text-muted">
+            <p className="mb-8 text-[11px] text-torqone-text-muted">
               © TorqOne · A CreoGrid product
             </p>
           </div>
