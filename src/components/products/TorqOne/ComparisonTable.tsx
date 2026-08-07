@@ -192,23 +192,23 @@ export function ComparisonTable() {
             {/* Header row */}
             <div className="grid grid-cols-[1.5fr_1fr_1fr_1fr] border-b border-torqone-border">
               <div className="p-5">
-                <span className="text-xs font-semibold tracking-wider uppercase text-torqone-text-muted">Capability</span>
+                <span className="text-[10px] ssm:text-xs font-semibold tracking-wider uppercase text-torqone-text-muted">Capability</span>
               </div>
-              <div className="relative p-5 text-center bg-torqone-primary-muted border-x border-torqone-primary/30">
+              <div className="relative px-[5px] py-5 ssm:px-5 ssm:py-5 text-center bg-torqone-primary-muted border-x border-torqone-primary/30">
                 <div className="absolute -top-px left-0 right-0 h-px bg-torqone-gradient" />
                 <div className="flex items-center justify-center gap-1.5 mb-1">
-                  <div className="w-5 h-5 rounded-md bg-torqone-gradient flex items-center justify-center">
+                  <div className="max-ssm:hidden w-5 h-5 rounded-md bg-torqone-gradient flex items-center justify-center">
                     <Zap className="w-2.5 h-2.5 text-white" strokeWidth={2.5} />
                   </div>
-                  <span className="text-sm font-bold text-white">TorqOne</span>
+                  <span className="text-[11px] ssm:text-sm font-bold text-white">TorqOne</span>
                 </div>
-                <Badge variant="ai" size="sm">Enterprise Intelligent Platform</Badge>
+                <Badge variant="ai" size="sm" className='max-ssm:hidden'>Enterprise Intelligent Platform</Badge>
               </div>
-              <div className="p-5 text-center">
-                <span className="text-sm font-semibold text-torqone-text-secondary">Traditional Gym Software</span>
+              <div className="px-[5px] py-5 ssm:px-5 ssm:py-5 text-center">
+                <span className="text-[11px] ssm:text-sm font-semibold text-torqone-text-secondary">Traditional Gym Software</span>
               </div>
-              <div className="p-5 text-center">
-                <span className="text-sm font-semibold text-torqone-text-secondary">Generic CRM</span>
+              <div className="px-[5px] py-5 ssm:px-5 ssm:py-5 text-center">
+                <span className="text-[11px] ssm:text-sm font-semibold text-torqone-text-secondary">Generic CRM</span>
               </div>
             </div>
 
@@ -224,12 +224,12 @@ export function ComparisonTable() {
                   i % 2 === 0 ? 'bg-torqone-background/30' : ''
                 }`}
               >
-                <div className="p-4 text-sm text-torqone-text-secondary">{row.feature}</div>
-                <div className="p-4 text-center bg-torqone-primary-muted/50 border-x border-torqone-primary/20">
+                <div className="px-[5px] py-5 ssm:px-4 ssm:py-4 text-[11px] ssm:text-sm text-torqone-text-secondary">{row.feature}</div>
+                <div className="px-[5px] py-5 ssm:px-4 ssm:py-4 text-center bg-torqone-primary-muted/50 border-x border-torqone-primary/20">
                   <Cell value={row.torqone} />
                 </div>
-                <div className="p-4 text-center"><Cell value={row.legacy} /></div>
-                <div className="p-4 text-center"><Cell value={row.generic} /></div>
+                <div className="px-[5px] py-5 ssm:px-4 ssm:py-4 text-center"><Cell value={row.legacy} /></div>
+                <div className="px-[5px] py-5 ssm:px-4 ssm:py-4 text-center"><Cell value={row.generic} /></div>
               </motion.div>
             ))}
           </div>

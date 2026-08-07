@@ -17,7 +17,7 @@ function DashboardMockup() {
       initial={{ opacity: 0, y: 40, scale: 0.97 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className="relative w-full max-w-2xl mx-auto"
+      className="relative max-w-2xl mx-auto"
     >
       {/* Glow behind the card */}
       <div
@@ -26,7 +26,7 @@ function DashboardMockup() {
       />
 
       {/* Main dashboard card */}
-      <div className="relative glass-card rounded-2xl overflow-hidden border border-torqone-border">
+      <div className="relative w-[75%] xs:w-full glass-card rounded-2xl overflow-hidden border border-torqone-border">
         {/* Top bar */}
         <div className="flex items-center justify-between px-5 py-3.5 border-b border-torqone-border/60 bg-torqone-card/80">
           <div className="flex items-center gap-2">
@@ -35,7 +35,7 @@ function DashboardMockup() {
               <div className="w-2.5 h-2.5 rounded-full bg-torqone-warning/80" />
               <div className="w-2.5 h-2.5 rounded-full bg-torqone-success/80" />
             </div>
-            <span className="text-xs text-torqone-text-muted ml-2 font-mono">torqone.app / dashboard</span>
+            <span className="max-xs:hidden text-xs text-torqone-text-muted ml-2 font-mono">torqone.app / dashboard</span>
           </div>
           <Badge variant="ai" dot pulse size="sm">AI Active</Badge>
         </div>
@@ -171,19 +171,26 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-5xl sm:text-6xl lg:text-[4.25rem] font-extrabold tracking-tight leading-[1.05] text-white mb-6"
-            >
-              <span className="lg:whitespace-nowrap"> The Enterprise Intelligent{' '} </span>
-              <span className="block lg:whitespace-nowrap">
-                <GradientText>Operating System</GradientText>
+            > 
+              <span className="block lg:whitespace-nowrap"> The Intelligent Platform{' '} </span>
+              <span className="lg:whitespace-nowrap">
+                <GradientText>
+  for Modern
+  {/* <br className="sm:hidden" />
+  {" "}Modern */}
+</GradientText>
               </span>
-              for Modern Gyms.
+              <br className="xxs:hidden" />
+              {" "} Gym 
+                <br className="xxs:hidden" />
+  {" "}Businesses
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.22, ease: 'easeOut' }}
-              className="text-lg text-torqone-text-secondary leading-relaxed mb-10 max-w-lg"
+              className="text-[15px] sm:text-lg text-torqone-text-secondary leading-relaxed mb-10 max-xs:w-[75%] xs:max-w-[85%]"
             >
               Every day you lose valuable time on manual follow-ups, missed leads, silent drop-offs, disconnected tools and late-night spreadsheet sessions. TorqOne runs & unifies everything for you — Customer Acquisition, Retention, Marketing, Billing, Trainers, and Growth along with Member management, Operations, Business intelligence, AI Automations, Dashboards and CRM into one intelligent platform— so you can spend less time managing your gym and more time growing it.
             </motion.p>
@@ -219,7 +226,7 @@ export function Hero() {
           </div>
 
           {/* Right column — dashboard */}
-          <div className="relative">
+          <div className="mt-12 relative">
             <DashboardMockup />
           </div>
         </div>

@@ -182,7 +182,7 @@ export function SiteNav() {
                         </div>
                       ) : (
                         <div className="flex h-full min-h-[8rem] flex-col justify-center rounded-lg border border-dashed border-slate-200/70 bg-slate-950/[0.02] p-3 text-sm text-muted-foreground/80">
-                          Select a product category to view solutions.
+                          Select an industry to view products.
                         </div>
                       )}
                     </div>

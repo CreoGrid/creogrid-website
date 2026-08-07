@@ -102,7 +102,7 @@ export function ProductHeader() {
                 <button
                   key={link.href}
                   onClick={() => handleNav(link.href)}
-                  className="px-3 py-2 text-[13px] font-medium text-torqone-text-secondary hover:text-white rounded-lg hover:bg-white/5 transition-colors duration-150"
+                  className="px-3 py-2 text-[13px] font-medium text-torqone-text-secondary hover:text-white rounded-lg hover:bg-white/5 transition-colors duration-150 cursor-pointer"
                 >
                   {link.label}
                 </button>
