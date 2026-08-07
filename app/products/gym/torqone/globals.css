@@ -1,0 +1,155 @@
+
+/* ─── TorqOne Design System Tokens ─────────────────────────────────────────── */
+
+
+/* ─── Base Reset ─────────────────────────────────────────────────────────────── */
+@layer base {
+  /* *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  } */
+
+  /* html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  } */
+
+  .torqone-page {
+    background-color: var(--torqone-background);
+    color: var(--torqone-text);
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  .torqone-page ::selection {
+    background-color: rgba(123, 92, 255, 0.35);
+    color: #fff;
+  }
+
+  .torqone-page :focus-visible {
+    outline: 2px solid var(--torqone-primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Custom scrollbar */
+  .torqone-page ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .torqone-page ::-webkit-scrollbar-track {
+    background: var(--torqone-background);
+  }
+  .torqone-page ::-webkit-scrollbar-thumb {
+    background: var(--torqone-border);
+    border-radius: 3px;
+  }
+  .torqone-page ::-webkit-scrollbar-thumb:hover {
+    background: var(--torqone-primary);
+  }
+}
+
+/* ─── Utility Classes ───────────────────────────────────────────────────────── */
+@layer utilities {
+  .torqone-page .text-gradient {
+    background: var(--torqone-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .torqone-page .text-gradient-ai {
+    background: var(--torqone-gradient-ai);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .torqone-page .glass {
+    background: rgba(17, 24, 39, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(30, 45, 64, 0.8);
+  }
+
+  .torqone-page .glass-lighter {
+    background: rgba(17, 24, 39, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(30, 45, 64, 0.6);
+  }
+
+  .torqone-page .glass-card {
+    background: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(30, 45, 64, 1);
+  }
+
+  .torqone-page .glow-primary {
+    box-shadow: 0 0 24px rgba(58, 93, 226, 0.4);
+  }
+
+  .torqone-page .glow-ai {
+    box-shadow: 0 0 24px rgba(123, 92, 255, 0.4);
+  }
+
+  .torqone-page .glow-accent {
+    box-shadow: 0 0 24px rgba(0, 212, 255, 0.4);
+  }
+
+  .torqone-page .border-gradient {
+    position: relative;
+  }
+
+  .torqone-page .border-gradient::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: var(--torqone-gradient);
+    z-index: -1;
+  }
+
+  .torqone-page .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .torqone-page .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+/* ─── Background Grid Pattern ───────────────────────────────────────────────── */
+.torqone-page .bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(30, 45, 64, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 45, 64, 0.4) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.torqone-page .bg-grid-pattern-sm {
+  background-image:
+    linear-gradient(rgba(30, 45, 64, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 45, 64, 0.3) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* ─── Dot Pattern ────────────────────────────────────────────────────────────── */
+.torqone-page .bg-dot-pattern {
+  background-image: radial-gradient(circle, rgba(30, 45, 64, 0.8) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ─── Reduced Motion ─────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .torqone-page *, .torqone-page *::before, .torqone-page *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

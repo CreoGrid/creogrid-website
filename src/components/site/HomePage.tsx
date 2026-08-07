@@ -29,7 +29,6 @@ export function HomePage() {
         <About />
         <Contact />
       </main>
-      <Footer />
       <Toaster position="top-center" richColors closeButton />
     </div>
   );

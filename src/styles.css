@@ -44,6 +44,36 @@
   --shadow-card: 0 1px 2px 0 rgb(15 23 42 / 0.04), 0 8px 24px -12px rgb(15 23 42 / 0.08);
   --shadow-card-hover: 0 2px 4px 0 rgb(15 23 42 / 0.06), 0 20px 40px -16px rgb(58 93 226 / 0.18);
   --shadow-elevated: 0 10px 30px -14px rgb(58 93 226 / 0.24);
+
+--color-torqone-background: var(--torqone-background);
+  --color-torqone-card: var(--torqone-card);
+  --color-torqone-card-hover: var(--torqone-card-hover);
+  --color-torqone-border: var(--torqone-border);
+  --color-torqone-border-subtle: var(--torqone-border-subtle);
+
+  --color-torqone-primary: var(--torqone-primary);
+  --color-torqone-primary-hover: var(--torqone-primary-hover);
+  --color-torqone-primary-muted: var(--torqone-primary-muted);
+
+  --color-torqone-ai: var(--torqone-ai);
+  --color-torqone-ai-hover: var(--torqone-ai-hover);
+  --color-torqone-ai-muted: var(--torqone-ai-muted);
+
+  --color-torqone-accent: var(--torqone-accent);
+  --color-torqone-accent-muted: var(--torqone-accent-muted);
+
+  --color-torqone-text: var(--torqone-text);
+  --color-torqone-text-secondary: var(--torqone-text-secondary);
+  --color-torqone-text-muted: var(--torqone-text-muted);
+
+  --color-torqone-success: var(--torqone-success);
+  --color-torqone-success-muted: var(--torqone-success-muted);
+
+  --color-torqone-warning: var(--torqone-warning);
+  --color-torqone-warning-muted: var(--torqone-warning-muted);
+
+  --color-torqone-error: var(--torqone-error);
+  --color-torqone-error-muted: var(--torqone-error-muted);
 }
 
 :root {
@@ -95,6 +125,108 @@
   --input: oklch(1 0 0 / 12%);
   --ring: oklch(0.7 0.18 266);
 }
+
+
+@utility bg-torqone-gradient {
+  background-image: var(--torqone-gradient);
+}
+
+@utility bg-torqone-gradient-subtle {
+  background-image: var(--torqone-gradient-subtle);
+}
+
+@utility bg-torqone-gradient-ai {
+  background-image: var(--torqone-gradient-ai);
+}
+
+@utility text-torqone-display-2xl {
+  font-size: 4.5rem;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+@utility text-torqone-display-xl {
+  font-size: 3.75rem;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+
+@utility text-torqone-display-lg {
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+}
+
+@utility text-torqone-display-md {
+  font-size: 2.25rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+@utility text-torqone-display-sm {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  font-weight: 600;
+}
+
+@utility backdrop-torqone-blur-xs {
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+@utility animate-fade-up {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+@utility animate-fade-in {
+  animation: fade-in 0.4s ease-out forwards;
+}
+
+@utility animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@utility animate-float-slow {
+  animation: float-slow 8s ease-in-out infinite;
+}
+
+@utility animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+@utility animate-shimmer {
+  animation: shimmer 3s linear infinite;
+}
+
+@utility animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@utility animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+@utility animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+@utility animate-border-glow {
+  animation: border-glow 3s ease-in-out infinite;
+}
+
+@utility animate-accordion-down {
+  animation: accordion-down 0.25s ease-out;
+}
+
+@utility animate-accordion-up {
+  animation: accordion-up 0.25s ease-out;
+}
+
 
 @layer base {
   * {
@@ -149,4 +281,5 @@
 .card-premium:hover::before {
   opacity: 1;
 }
+
 

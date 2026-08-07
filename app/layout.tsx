@@ -2,7 +2,10 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 
-import { Providers } from "@/components/providers/Providers";
+import { Providers } from "@/components/providers/Providers"
+import { SiteNav } from "@/components/site/SiteNav";
+import { Footer } from "@/components/site/Footer";
+
 import "../src/styles.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -80,10 +83,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${plusJakartaSans.variable} ${inter.variable}`}
+      className={``}
     >
       <body>
-        <Providers>{children}</Providers>
+        <Providers>
+            {children}
+            <Footer />
+        </Providers>
       </body>
     </html>
   );

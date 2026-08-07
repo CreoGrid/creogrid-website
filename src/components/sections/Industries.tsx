@@ -70,6 +70,16 @@ const ITEMS = [
     body: "Inventory management, billing, prescriptions, suppliers, and customer engagement in one system.",
   },
   {
+    icon: Dumbbell,
+    title: "Gyms",
+    body: "Memberships, attendance, subscriptions, trainers, scheduling, and customer retention.",
+  },
+  {
+    icon: HeartPulse,
+    title: "Wellness Centers",
+    body: "Manage appointments, memberships, wellness programs, and client engagement.",
+  },
+  {
     icon: GraduationCap,
     title: "Schools",
     body: "Digitize admissions, attendance, examinations, fees, communication, and school administration.",
@@ -103,16 +113,6 @@ const ITEMS = [
     icon: Hotel,
     title: "Hotels",
     body: "Simplify reservations, guest services, housekeeping, billing, and hospitality management.",
-  },
-  {
-    icon: Dumbbell,
-    title: "Gyms",
-    body: "Memberships, attendance, subscriptions, trainers, scheduling, and customer retention.",
-  },
-  {
-    icon: HeartPulse,
-    title: "Wellness Centers",
-    body: "Manage appointments, memberships, wellness programs, and client engagement.",
   },
   {
     icon: Scissors,

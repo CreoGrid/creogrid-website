@@ -10,8 +10,9 @@ export function Logo({
 }) {
   const logoColorUrl = '/CreoGrid-LogoColor.png'
   const logoMonoUrl = '/CreoGrid-LogoMono.png'
+  const logoMonoWhiteUrl = '/CreoGrid-LogoMonoWhite.png'
   const src =
-    variant === "mono" ? logoMonoUrl : variant === "icon" ? logoColorUrl : logoColorUrl;
+    variant === "mono" ? logoMonoUrl : variant === "icon" ? logoColorUrl : variant === "mono-white" ? logoMonoWhiteUrl : logoColorUrl;
   return (
     <img
       src={src}
