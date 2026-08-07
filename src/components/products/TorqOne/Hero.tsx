@@ -173,7 +173,7 @@ export function Hero() {
               className="text-5xl sm:text-6xl lg:text-[4.25rem] font-extrabold tracking-tight leading-[1.05] text-white mb-6"
             >
               <span className="lg:whitespace-nowrap"> The Enterprise Intelligent{' '} </span>
-              <span className="block whitespace-nowrap">
+              <span className="block lg:whitespace-nowrap">
                 <GradientText>Operating System</GradientText>
               </span>
               for Modern Gyms.
