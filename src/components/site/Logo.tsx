@@ -1,5 +1,5 @@
 
-type Variant = "color" | "mono" | "icon";
+type Variant = "color" | "mono" | "mono-white" | "icon";
 
 export function Logo({
   variant = "color",

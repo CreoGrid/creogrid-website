@@ -264,7 +264,7 @@ function OperatingSystemViz() {
               initial={{ scale: 0, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.8 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.5, delay: 0.8 + i * 0.1, ease: [0.22, 1, 0.36, 1] }} 
             >
               <circle cx={nx} cy={ny} r={47} fill="rgba(17,24,39,0.9)" stroke={node.color} strokeWidth="1.25" strokeOpacity="0.5" />
               <circle cx={nx} cy={ny} r={55} fill={node.color} fillOpacity="0.06" />
