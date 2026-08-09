@@ -22,10 +22,13 @@ import {
 } from "@/lib/motion";
 
 import { useConnectionAnchor } from "@/components/motion/useConnectionAnchor";
+
+
 const initialState: ContactFormState = {
   success: false,
   message: "",
 };
+
 
 export function Contact() {
   const anchor = useConnectionAnchor({
@@ -211,6 +214,7 @@ export function Contact() {
     </section>
   );
 }
+
 
 function Field({
   label,

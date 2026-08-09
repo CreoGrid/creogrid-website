@@ -13,23 +13,24 @@ import { About } from "@/components/sections/About";
 import { Contact } from "@/components/sections/Contact";
 import { ConnectionLine } from "@/components/motion/ConnectionLine";
 
+
 export function HomePage() {
-  return (
-    <div className="relative min-h-dvh bg-background">
-      <SiteNav />
-      <ConnectionLine />
-      <main className="relative z-10">
-        <Hero />
-        <BusinessChallenges />
-        <Solutions />
-        <Industries />
-        <Process />
-        <Technology />
-        <BeforeAfter />
-        <About />
-        <Contact />
-      </main>
-      <Toaster position="top-center" richColors closeButton />
-    </div>
-  );
+    return (
+        <div className="relative min-h-dvh bg-background">
+            <SiteNav />
+            <ConnectionLine />
+            <main className="relative z-10">
+                <Hero />
+                <BusinessChallenges />
+                <Solutions />
+                <Industries />
+                <Process />
+                <Technology />
+                <BeforeAfter />
+                <About />
+                <Contact />
+            </main>
+            <Toaster position="top-center" richColors closeButton />
+        </div>
+    );
 }
