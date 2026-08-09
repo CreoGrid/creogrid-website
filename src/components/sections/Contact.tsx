@@ -148,7 +148,6 @@ export function Contact() {
             <div className="grid gap-5 sm:grid-cols-2">
               <Field
                 label="Name"
-                error={state.errors?.name?.[0]}
               >
                 <Input
                   name="name"
@@ -160,7 +159,6 @@ export function Contact() {
 
               <Field
                 label="Email"
-                error={state.errors?.email?.[0]}
               >
                 <Input
                   type="email"
@@ -175,7 +173,6 @@ export function Contact() {
             {/* Company */}
             <Field
               label="Company"
-              error={state.errors?.company?.[0]}
               optional
             >
               <Input
@@ -188,7 +185,6 @@ export function Contact() {
             {/* Message */}
             <Field
               label="How can we help?"
-              error={state.errors?.message?.[0]}
             >
               <Textarea
                 name="body"
