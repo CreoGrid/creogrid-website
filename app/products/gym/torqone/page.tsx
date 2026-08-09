@@ -16,11 +16,16 @@ import { PlansComparison } from '@/components/products/TorqOne/PlansComparison';
 import { FAQ } from '@/components/products/TorqOne/FAQ';
 import { CTA } from '@/components/products/TorqOne/CTA';
 import { ProductClosing } from '@/components/products/TorqOne/ProductClosing';
+
+import { CTAProvider } from '@/components/products/TorqOne/CTAContext';
+import { ModalManager } from '@/components/products/TorqOne/ModalManager';
 // import { Footer } from '@/components/products/TorqOne/Footer';
 
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-torqone-background">
+      <CTAProvider>
+        <ModalManager />
       <ProductHeader />
       {/* <BreadcrumbBar/> */}
       <Hero />
@@ -38,6 +43,7 @@ export default function Home() {
       <FAQ />
       <CTA />
       <ProductClosing />
+        </CTAProvider>
     </div>
   );
 }

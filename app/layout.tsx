@@ -3,7 +3,7 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { Providers } from "@/components/providers/Providers"
-import { SiteNav } from "@/components/site/SiteNav";
+import { SiteNav } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 
 import "../src/styles.css";

@@ -1,6 +1,6 @@
 import { Toaster } from "sonner";
 
-import { SiteNav } from "@/components/site/SiteNav";
+import { SiteNav } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { BusinessChallenges } from "@/components/sections/BusinessChallenges";

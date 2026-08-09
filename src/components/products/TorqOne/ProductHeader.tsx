@@ -7,7 +7,7 @@ import { Menu, X, Home, ChevronRight, ArrowRight, ArrowLeft } from 'lucide-react
 import { cn } from '@/lib/utils';
 import { Logo } from "../../site/Logo";
 import { Button } from './primitives/Button';
-import { CreoGridLogo, TorqOneLogo } from './LogoPlaceholders';
+import { useCTA } from './CTAContext';
 
 const NAV_LINKS = [
   { label: 'Gym Challenges',          href: '#problems' },
@@ -32,6 +32,8 @@ export function ProductHeader() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const router = useRouter();
+
+  const { openDemo } = useCTA();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -115,7 +117,7 @@ export function ProductHeader() {
                 size="sm"
                 iconPosition="right"
                 icon={<ArrowRight className="w-3.5 h-3.5" />}
-                onClick={() => handleNav('#pricing')}
+                onClick={openDemo}
               >
                 Book a Demo
               </Button>
@@ -198,7 +200,7 @@ export function ProductHeader() {
                   variant="gradient"
                   size="lg"
                   className="w-full"
-                  onClick={() => handleNav('#pricing')}
+                  onClick={openDemo}
                 >
                   Book a Demo
                 </Button>

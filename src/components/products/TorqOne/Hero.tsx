@@ -4,12 +4,14 @@ import Image from "next/image";
 import { motion } from 'framer-motion';
 import {
   ArrowRight, TrendingUp, Users, Zap, Brain, BarChart3,
-  CheckCircle, Activity, Sparkles, Shield, ChevronRight,
+  CheckCircle, Phone, Activity, Sparkles, Shield, ChevronRight,
 } from 'lucide-react';
 import { Button } from './primitives/Button';
 import { Badge } from './primitives/Badge';
 import { BackgroundOrbs, GridBackground } from './primitives/Background';
 import { GradientText } from './primitives/ui';
+import { useCTA } from './CTAContext';
+
 
 function DashboardMockup() {
   return (
@@ -122,6 +124,9 @@ function DashboardMockup() {
 }
 
 export function Hero() {
+
+    const { openDemo, openSales } = useCTA();
+
   const trustItems = [
     'No credit card required',
     'Setup in 48 hours',
@@ -139,26 +144,26 @@ export function Hero() {
         className="pointer-events-none absolute inset-0"
         style={{
           background:
-            'radial-gradient(ellipse 80% 60% at 50% 100%, rgba(7,16,24,0.95) 30%, transparent 80%)',
+            "radial-gradient(ellipse 80% 60% at 50% 100%, rgba(7,16,24,0.95) 30%, transparent 80%)",
         }}
       />
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         <Image
-  src="/TorqOneLogo_Final2.png"
-  alt="TorqOne"
-  width={500}
-  height={147}
-  priority
-  className="mx-auto my-8 h-auto w-[280px] sm:w-[360px] lg:w-[420px]"
-/>
+          src="/TorqOneLogo_Final2.png"
+          alt="TorqOne"
+          width={500}
+          height={147}
+          priority
+          className="mx-auto my-8 h-auto w-[280px] sm:w-[360px] lg:w-[420px]"
+        />
         <div className="grid lg:grid-cols-2 gap-16 items-center pb-24">
           {/* Left column — copy */}
           <div className="text-left">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               className="mb-6"
             >
               <Badge variant="ai" dot pulse size="sm">
@@ -171,28 +176,31 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
               className="text-5xl sm:text-6xl lg:text-[4.25rem] font-extrabold tracking-tight leading-[1.05] text-white mb-6"
-            > 
-              <span className="block lg:whitespace-nowrap"> The Intelligent Platform{' '} </span>
+            >
+              <span className="block lg:whitespace-nowrap"> The Intelligent Platform </span>
               <span className="lg:whitespace-nowrap">
                 <GradientText>
-  for Modern
-  {/* <br className="sm:hidden" />
+                  for Modern
+                  {/* <br className="sm:hidden" />
   {" "}Modern */}
-</GradientText>
+                </GradientText>
               </span>
-              <br className="xxs:hidden" />
-              {" "} Gym 
-                <br className="xxs:hidden" />
-  {" "}Businesses
+              <br className="xxs:hidden" /> Gym
+              <br className="xxs:hidden" /> Businesses
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.22, ease: 'easeOut' }}
+              transition={{ duration: 0.6, delay: 0.22, ease: "easeOut" }}
               className="text-[15px] sm:text-lg text-torqone-text-secondary leading-relaxed mb-10 max-xs:w-[75%] xs:max-w-[85%]"
             >
-              Every day you lose valuable time on manual follow-ups, missed leads, silent drop-offs, disconnected tools and late-night spreadsheet sessions. TorqOne runs & unifies everything for you — Customer Acquisition, Retention, Marketing, Billing, Trainers, and Growth along with Member management, Operations, Business intelligence, AI Automations, Dashboards and CRM into one intelligent platform— so you can spend less time managing your gym and more time growing it.
+              Every day you lose valuable time on manual follow-ups, missed leads, silent drop-offs,
+              disconnected tools and late-night spreadsheet sessions. TorqOne runs & unifies
+              everything for you — Customer Acquisition, Retention, Marketing, Billing, Trainers,
+              and Growth along with Member management, Operations, Business intelligence, AI
+              Automations, Dashboards and CRM into one intelligent platform— so you can spend less
+              time managing your gym and more time growing it.
             </motion.p>
 
             <motion.div
@@ -201,7 +209,22 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.33 }}
               className="flex flex-wrap gap-3 mb-10"
             >
-              <Button variant="gradient" size="xl" iconPosition="right" icon={<ArrowRight className="w-4 h-4" />}>
+              <Button
+                variant="gradient"
+                size="xl"
+                iconPosition="right"
+                icon={<Phone className="w-4 h-4" />}
+                onClick={openSales}
+              >
+                Talk to us
+              </Button>
+              <Button
+                variant="outline"
+                size="xl"
+                iconPosition="right"
+                icon={<ArrowRight className="w-4 h-4" />}
+                onClick={openDemo}
+              >
                 Book a Demo
               </Button>
               {/* <Button variant="outline" size="xl" iconPosition="right" icon={<ChevronRight className="w-4 h-4" />}>
@@ -217,7 +240,10 @@ export function Hero() {
               className="flex flex-wrap items-center gap-x-5 gap-y-2"
             >
               {trustItems.map((item) => (
-                <span key={item} className="flex items-center gap-1.5 text-xs text-torqone-text-muted">
+                <span
+                  key={item}
+                  className="flex items-center gap-1.5 text-xs text-torqone-text-muted"
+                >
                   <CheckCircle className="w-3.5 h-3.5 text-torqone-success shrink-0" />
                   {item}
                 </span>

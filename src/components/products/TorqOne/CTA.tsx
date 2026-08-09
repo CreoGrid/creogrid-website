@@ -5,8 +5,12 @@ import { ArrowRight, Phone, Sparkles } from 'lucide-react';
 import { Button } from './primitives/Button';
 import { Badge } from './primitives/Badge';
 import { ScrollReveal } from './primitives/motion';
+import { useCTA } from './CTAContext';
 
 export function CTA() {
+
+const { openDemo, openSales } = useCTA();
+
   return (
     <section className="relative py-28 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -86,12 +90,28 @@ export function CTA() {
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="flex flex-wrap items-center justify-center gap-3"
               >
-                <Button variant="gradient" size="xl" iconPosition="right" icon={<ArrowRight className="w-4 h-4" />}>
+                <Button variant="gradient" size="xl" iconPosition="right" icon={<ArrowRight className="w-4 h-4" />} onClick={openDemo}>
                   Book a Demo
                 </Button>
-                <Button variant="outline" size="xl" iconPosition="left" icon={<Phone className="w-4 h-4" />}>
-                  Talk to Sales
+                <Button variant="outline" size="xl" iconPosition="left" icon={<Phone className="w-4 h-4" />} onClick={openSales}>
+                  Speak to Our Team
                 </Button>
+                {/* Mobile: direct call */}
+                <a
+                  href="tel:+919074688913"
+                  className="sm:hidden"
+                  aria-label="Call Sales"
+                >
+                  <Button
+                    variant="outline"
+                    size="xl"
+                    iconPosition="left"
+                    icon={<Phone className="w-4 h-4" />}
+                    tabIndex={-1}
+                  >
+                    Speak to Our Team
+                  </Button>
+                </a>
               </motion.div>
 
               <motion.p

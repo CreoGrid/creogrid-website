@@ -1,13 +1,10 @@
 'use client';
 
 import Image from "next/image";
-import { motion } from 'framer-motion';
-import { ArrowRight, Phone } from 'lucide-react';
-import { Button } from './primitives/Button';
-import { ScrollReveal } from './primitives/motion';
-import { TorqOneLogo, CreoGridLogo } from './LogoPlaceholders';
+import { ScrollReveal } from './primitives/motion'; 
 
 export function ProductClosing() {
+    
   return (
     <footer className="relative border-t border-torqone-border/60 bg-torqone-card/30 overflow-hidden">
       <div
