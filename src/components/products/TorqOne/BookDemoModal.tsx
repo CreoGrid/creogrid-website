@@ -19,7 +19,9 @@ import {
 } from "@/actions/lead.action";
 
 /* ─── Shared Input ──────────────────────────────────────────────────────────── */
-interface FieldProps extends React.InputHTMLAttributes<HTMLInputElement> {
+
+interface FieldProps
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "prefix"> {
   label: string;
   icon?: React.ReactNode;
   prefix?: React.ReactNode;
