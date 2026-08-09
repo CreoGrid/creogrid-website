@@ -18,6 +18,10 @@ dist-ssr
 
 .next
 
+.env
+.env.local
+.env.*.local
+
 # Wrangler / Cloudflare
 .wrangler/
 .dev.vars
