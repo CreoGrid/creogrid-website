@@ -59,7 +59,7 @@ interface Plan {
     id: string;
     name: string;
     monthly: string;
-    onboarding: string;
+    // onboarding: string;
     highlighted: boolean;
     accent: string;
 }
@@ -69,7 +69,7 @@ const PLANS: Plan[] = [
         id: "launch",
         name: "Launch",
         monthly: "₹1499",
-        onboarding: "₹25k",
+        // onboarding: "₹25k",
         highlighted: false,
         accent: "#3A5DE2",
     },
@@ -77,23 +77,23 @@ const PLANS: Plan[] = [
         id: "growth",
         name: "Growth (recommended)",
         monthly: "₹2,699",
-        onboarding: "₹35k",
+        // onboarding: "₹35k",
         highlighted: true,
         accent: "#7B5CFF",
     },
     {
         id: "scale",
-        name: "Scale",
+        name: "Scale (best value)",
         monthly: "₹4,999",
-        onboarding: "₹50k",
+        // onboarding: "₹50k",
         highlighted: false,
         accent: "#00D4FF",
     },
     {
         id: "enterprise",
-        name: "Enterprise",
+        name: "Enterprise (Custom)",
         monthly: "Custom",
-        onboarding: "Custom",
+        // onboarding: "Custom",
         highlighted: false,
         accent: "#F59E0B",
     },
@@ -295,22 +295,21 @@ export function PlansComparison() {
                                             </span>
                                         </div>
                                         {/* Onboarding — secondary */}
-                                        <p className="text-[11px] text-torqone-text-muted mt-1">
+                                        {/* <p className="text-[11px] text-torqone-text-muted mt-1">
                                             Onboarding{" "}
                                             <span className="text-torqone-text-secondary font-semibold">
                                                 {plan.onboarding}
                                             </span>
-                                        </p>
+                                        </p> */}
                                     </div>
                                 ))}
 
                                 {/* Onboarding note — full width */}
                                 <div className="col-span-5 px-5 py-3.5 bg-torqone-background/40 border-y border-torqone-border/60">
                                     <p className="text-xs text-torqone-text-muted leading-relaxed text-center">
-                                        Onboarding includes platform configuration, staff setup and
-                                        required integrations.{" "}
+                                        Choose the platform level that fits your business. Implementation, infrastructure setup and integrations are tailored to your requirements.
                                         <span className="text-torqone-text-secondary">
-                                            Data migration is included from Growth onward and
+                                             {" "}Data migration is included from Growth onward and
                                             available as an add-on for Launch.
                                         </span>
                                     </p>
@@ -459,18 +458,16 @@ export function PlansComparison() {
                                                     /mo
                                                 </span>
                                             </div>
-                                            <p className="text-[10px] text-torqone-text-muted">
+                                            {/* <p className="text-[10px] text-torqone-text-muted">
                                                 Onboarding {plan.onboarding}
-                                            </p>
+                                            </p> */}
                                         </div>
                                     </div>
 
                                     {/* Onboarding note */}
-                                    <p className="text-[11px] text-torqone-text-muted leading-relaxed mb-4 p-2.5 rounded-lg bg-torqone-background/40">
-                                        Onboarding includes platform configuration, staff setup and
-                                        required integrations. Data migration is included from
-                                        Growth onward.
-                                    </p>
+                                    {/* <p className="text-[11px] text-torqone-text-muted leading-relaxed mb-4 p-2.5 rounded-lg bg-torqone-background/40">
+                                        Choose the platform level that fits your business. Implementation, infrastructure setup and integrations are tailored to your requirements.
+                                    </p> */}
 
                                     {/* Modules */}
                                     <div className="space-y-2.5 mb-5">

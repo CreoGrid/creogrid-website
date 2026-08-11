@@ -14,8 +14,8 @@ const NAV_LINKS = [
   { label: 'Platform & Features', href: '#platform' },
   { label: 'AI Engine',         href: '#ai-engine' },
   { label: 'Automation Engine', href: '#automation' },
-  { label: 'Why TorqOne',       href: '#metrics' },
-  { label: 'Plans & Pricing',   href: '#pricing' },
+  { label: 'Why TorqOne',       href: '#why-toqone' },
+  { label: 'Plans & Pricing',   href: '#plans' },
   { label: 'FAQ',               href: '#faq' },
 ];
 

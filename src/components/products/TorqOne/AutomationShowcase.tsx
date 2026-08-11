@@ -381,7 +381,7 @@ function FlowCard({ flow }: { flow: (typeof FLOWS)[0] }) {
 
 export function AutomationShowcase() {
     return (
-        <section className="relative py-28 overflow-hidden">
+        <section className="relative py-28 overflow-hidden" id="automation">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <ScrollReveal>
                     <div className="text-center mb-14">

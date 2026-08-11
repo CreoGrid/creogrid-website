@@ -178,7 +178,7 @@ function Cell({ value }: { value: boolean | "partial" }) {
 
 export function ComparisonTable() {
     return (
-        <section className="relative py-28 overflow-hidden bg-torqone-card/20" id="comparison">
+        <section className="relative py-28 overflow-hidden bg-torqone-card/20" id="why-toqone">
             <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
                 <ScrollReveal>
                     <SectionHeading
