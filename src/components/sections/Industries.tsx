@@ -74,7 +74,7 @@ const ITEMS = [
         body: "Integrated patient management, appointments, billing, pharmacy, staff, and operational workflows.",
     },
     {
-        icon: Stethoscope,
+        icon: Stethoscope, 
         title: "Clinics",
         body: "Streamline appointments, consultations, prescriptions, patient records, and daily clinic operations.",
     },
