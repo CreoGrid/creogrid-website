@@ -79,6 +79,11 @@ function StaticFallback() {
 
 
 export function HeroVisualization() {
+
+
+
+
+    
     const isDesktop = useIsDesktop();
 
     return (

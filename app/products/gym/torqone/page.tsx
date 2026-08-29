@@ -38,7 +38,7 @@ export default function Home() {
                 <AutomationShowcase />
                 {/* <Metrics />
                 <ROISection /> */}
-                <PlansComparison />
+                {/* <PlansComparison /> */}
                 <ComparisonTable />
                 {/* <Testimonials /> */}
                 <FAQ />

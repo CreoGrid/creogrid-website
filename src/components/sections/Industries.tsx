@@ -49,6 +49,26 @@ import { useConnectionAnchor } from "@/components/motion/useConnectionAnchor";
 
 const ITEMS = [
     {
+        icon: GraduationCap,
+        title: "Schools",
+        body: "Digitize admissions, attendance, examinations, fees, communication, and school administration.",
+    },
+    {
+        icon: BookOpen,
+        title: "Colleges",
+        body: "Manage academics, student information, faculty, examinations, placements, and campus operations.",
+    },
+    {
+        icon: Dumbbell,
+        title: "Gyms",
+        body: "Memberships, attendance, subscriptions, trainers, scheduling, and customer retention.",
+    },
+    {
+        icon: HeartPulse,
+        title: "Wellness Centers",
+        body: "Manage appointments, memberships, wellness programs, and client engagement.",
+    },
+     {
         icon: Hospital,
         title: "Hospitals",
         body: "Integrated patient management, appointments, billing, pharmacy, staff, and operational workflows.",
@@ -67,26 +87,6 @@ const ITEMS = [
         icon: Pill,
         title: "Pharmacies",
         body: "Inventory management, billing, prescriptions, suppliers, and customer engagement in one system.",
-    },
-    {
-        icon: Dumbbell,
-        title: "Gyms",
-        body: "Memberships, attendance, subscriptions, trainers, scheduling, and customer retention.",
-    },
-    {
-        icon: HeartPulse,
-        title: "Wellness Centers",
-        body: "Manage appointments, memberships, wellness programs, and client engagement.",
-    },
-    {
-        icon: GraduationCap,
-        title: "Schools",
-        body: "Digitize admissions, attendance, examinations, fees, communication, and school administration.",
-    },
-    {
-        icon: BookOpen,
-        title: "Colleges",
-        body: "Manage academics, student information, faculty, examinations, placements, and campus operations.",
     },
     {
         icon: ShoppingBag,
